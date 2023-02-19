@@ -5,7 +5,6 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
-
 DEBUG = 'RENDER' not in os.environ
 
 ALLOWED_HOSTS = []
@@ -105,8 +104,8 @@ USE_TZ = True
 
 
 STATIC_URL ='/static/'
-
-
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 
 
@@ -119,6 +118,5 @@ if not DEBUG:    # Tell Django to copy statics to the `staticfiles` directory
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
-STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
