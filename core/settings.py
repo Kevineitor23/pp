@@ -104,9 +104,7 @@ USE_TZ = True
 
 STATIC_URL ='/static/'
 
-STATICFILES_DIRS = [
-    "/home/static/home",
-]
+
 
 
 if not DEBUG:    # Tell Django to copy statics to the `staticfiles` directory
