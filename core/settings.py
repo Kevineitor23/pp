@@ -105,7 +105,6 @@ USE_TZ = True
 STATIC_URL ='/static/'
 
 STATICFILES_DIRS = [
-    "/opt/render/project/src/staticfiles",
     "/home/static/home",
 ]
 
