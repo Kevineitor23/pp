@@ -10,3 +10,4 @@ def home(request):
     else:
         form = MyModelForm()
     return render(request, 'home/index.html', {'form': form})
+  
